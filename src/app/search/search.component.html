@@ -1,0 +1,7 @@
+<input type="text" [formControl]="search" placeholder="Search Joke" />
+<ng-container *ngIf="result$ | async as result">
+  <h3>Total Jokes: {{ result.total }}</h3>
+  <ul>
+    <li *ngFor="let joke of result.result">{{ joke.value }}</li>
+  </ul>
+</ng-container>

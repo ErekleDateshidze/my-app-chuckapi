@@ -1,0 +1,7 @@
+<ng-container *ngIf="joke$ | async as joke; else noData">
+  <p>{{ joke.value }}</p>
+  <span>Created at :{{ joke.created_at | date : "shortDate" }}</span>
+  <span> Cateory : {{ joke.categories }}</span>
+</ng-container>
+
+<ng-template #noData>No Data Available</ng-template>

@@ -1,0 +1,4 @@
+<ng-container *ngIf="joke$ | async as joke">
+  <p>{{ joke.value }}</p>
+  <span>Created at :{{ joke.created_at | date : "shortDate" }}</span>
+</ng-container>

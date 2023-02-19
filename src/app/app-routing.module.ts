@@ -21,12 +21,12 @@ const routes: Routes = [
     component: JokeComponent,
   },
   {
-    path: 'list',
-    component: JokeListComponent,
-  },
-  {
     path: 'search',
     component: SearchComponent,
+  },
+  {
+    path: 'list',
+    component: JokeListComponent,
   },
 ];
 

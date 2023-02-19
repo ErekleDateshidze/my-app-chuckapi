@@ -1,0 +1,26 @@
+{
+  "jokes": [
+    {
+      "categories": [
+        "science"
+      ],
+      "created_at": "2020-01-05 13:42:19.324003",
+      "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+      "id": "zfgekm2usfyfra7m5x0wta",
+      "updated_at": "2020-01-05 13:42:19.324003",
+      "url": "https://api.chucknorris.io/jokes/zfgekm2usfyfra7m5x0wta",
+      "value": "If tapped, a Chuck Norris roundhouse kick could power the country of Australia for 44 minutes."
+    },
+    {
+      "categories": [
+        "movie"
+      ],
+      "created_at": "2020-01-05 13:42:29.855523",
+      "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+      "id": "Z_9zGThoRuCxkU08yvHBxQ",
+      "updated_at": "2020-01-05 13:42:29.855523",
+      "url": "https://api.chucknorris.io/jokes/Z_9zGThoRuCxkU08yvHBxQ",
+      "value": "Arnold Schwarzenegger would never ask Chuck Norris to \"DO IT NOW\" because he knows Chuck will"
+    }
+  ]
+}

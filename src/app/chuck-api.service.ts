@@ -37,4 +37,21 @@ export class ChuckApiService {
       params,
     });
   }
+
+  getSavedJokeList() {
+    return this.http.get<Joke[]>(`${environment.jsonServerBase}/jokes`)
+  }
+
+  saveJoke(joke:Joke) {
+    return this.http.post(`${environment.jsonServerBase}/jokes`,joke)
+  } 
+
+  editJoke(id:string , joke:Joke) {
+    return this.http.patch(`${environment.jsonServerBase}/jokes/${id}`,joke)
+  }
+
+  deleteJoke(id:string) {
+    return this.http.delete(`${environment.jsonServerBase}/jokes/${id}`)
+  }
+
 }

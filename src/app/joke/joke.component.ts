@@ -16,6 +16,10 @@ export class JokeComponent implements OnInit {
 
   joke$: Observable<Joke | null> | undefined 
 
+  addTolist(joke:Joke) {
+    this.apiService.saveJoke(joke).subscribe(() => console.log('Joke has been added'))
+  }
+
   ngOnInit(): void {
     const category = this.activatedRpute.snapshot.paramMap.get('category');
 

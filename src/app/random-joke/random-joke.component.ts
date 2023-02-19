@@ -14,6 +14,5 @@ export class RandomJokeComponent implements OnInit {
 
   constructor(private api: ChuckApiService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }

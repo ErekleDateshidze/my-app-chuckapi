@@ -2,6 +2,8 @@
 <ng-container *ngIf="result$ | async as result">
   <h3>Total Jokes: {{ result.total }}</h3>
   <ul>
-    <li *ngFor="let joke of result.result">{{ joke.value }}</li>
+    <li *ngFor="let joke of result.result">
+      {{ joke.value }} <button (click)="addToList(joke)">Add to List</button>
+    </li>
   </ul>
 </ng-container>

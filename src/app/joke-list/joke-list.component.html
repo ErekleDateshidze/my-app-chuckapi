@@ -1,1 +1,36 @@
-<p>joke-list works!</p>
+<ul>
+  <li *ngFor="let joke of jokesList$ | async">
+    <div class="item">
+      <div>
+        <span *ngIf="selectedJokeId !== joke.id"> {{ joke.value }}</span>
+        <input
+          type="text"
+          *ngIf="selectedJokeId === joke.id"
+          [(ngModel)]="joke.value"
+          #input
+        />
+      </div>
+      <div *ngIf="joke.categories?.length; else noCategories">
+        {{ joke.categories }}
+      </div>
+      <div>{{ joke.created_at | date : "shortDate" }}</div>
+    </div>
+    <div>
+      <button
+        (click)="enterEdit(joke.id)"
+        *ngIf="selectedJokeId !== joke.id"
+        [disabled]="selectedJokeId"
+      >
+        -
+      </button>
+      <button (click)="edit(joke)" *ngIf="selectedJokeId == joke.id">✓</button>
+      <button (click)="cancelEdit()" *ngIf="selectedJokeId == joke.id">
+        ✘
+      </button>
+      <button (click)="deleteJoke(joke.id)" [disabled]="selectedJokeId">
+        delete
+      </button>
+    </div>
+  </li>
+</ul>
+<ng-template #noCategories><div>No Category</div></ng-template>

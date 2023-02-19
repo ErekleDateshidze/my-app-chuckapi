@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, Observable, switchMap } from 'rxjs';
 import { ChuckApiService } from '../chuck-api.service';
-import { QueryResult } from '../chuck.model';
+import { Joke, QueryResult } from '../chuck.model';
 
 @Component({
   selector: 'app-search',
@@ -16,6 +16,10 @@ export class SearchComponent implements OnInit {
   result$: Observable<QueryResult> | undefined;
 
   constructor(private apiService:ChuckApiService){}
+
+  addToList(joke:Joke) {
+    this.apiService.saveJoke(joke).subscribe(c => console.log(c))
+  }
 
   ngOnInit(): void {
     this.result$ = this.search.valueChanges
